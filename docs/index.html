@@ -1,38 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Game Optimizer for Windows</title>
-  <meta name="description" content="A lightweight, reversible PowerShell game launcher and optimizer for Windows.">
-  <style>
-    :root { color-scheme: dark; --bg:#0b1020; --card:#121a2d; --text:#eef3ff; --muted:#aab7d4; --accent:#61dafb; }
-    * { box-sizing:border-box; } body { margin:0; font-family:Segoe UI,system-ui,sans-serif; background:linear-gradient(135deg,#0b1020,#172554); color:var(--text); }
-    main { max-width:980px; margin:auto; padding:72px 24px; } .hero { padding:42px; background:rgba(18,26,45,.86); border:1px solid #2d3b61; border-radius:24px; box-shadow:0 20px 60px #0006; }
-    h1 { font-size:clamp(2.2rem,6vw,4.5rem); margin:0 0 16px; } h2 { margin-top:42px; } p,li { color:var(--muted); line-height:1.7; } .accent { color:var(--accent); }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:26px; } .card { background:var(--card); padding:22px; border-radius:16px; border:1px solid #293758; }
-    code { color:#d8f9ff; background:#09101f; padding:3px 6px; border-radius:5px; } a { color:var(--accent); } .button { display:inline-block; padding:12px 18px; margin:8px 8px 0 0; border-radius:10px; background:var(--accent); color:#07111c; text-decoration:none; font-weight:700; }
-    footer { margin-top:44px; color:var(--muted); font-size:.9rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Optimizer — Windows için akıllı oyun başlatıcı</title>
+<meta name="description" content="Windows için güvenli, geri alınabilir ve hafif PowerShell oyun optimizasyon aracı.">
+<style>
+:root{--bg:#080b14;--panel:#111827;--panel2:#172033;--text:#f5f7ff;--muted:#a9b4c9;--line:#26334c;--blue:#68d8ff;--purple:#9b7bff;--green:#72e6a6;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0,#202057 0,transparent 36%),linear-gradient(140deg,#080b14,#10182b 55%,#0a0e1a);color:var(--text);font-family:Inter,Segoe UI,system-ui,sans-serif;line-height:1.6}a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}.brand{font-weight:800;letter-spacing:.3px}.brand span{color:var(--blue)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.94rem}.hero{padding:92px 0 76px;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}.eyebrow{color:var(--blue);font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}.hero h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:1.02;margin:16px 0 24px;letter-spacing:-.06em}.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--blue),var(--purple));background-clip:text;color:transparent}.lead{font-size:1.18rem;color:var(--muted);max-width:650px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:750;border:1px solid var(--line)}.primary{background:linear-gradient(100deg,var(--blue),#91b8ff);color:#07101b;border:0}.terminal{background:#0b111e;border:1px solid #33435f;border-radius:16px;padding:20px;box-shadow:0 25px 80px #0007;color:#c8d4ec;font-family:Consolas,monospace;font-size:.9rem}.terminal .bar{color:#596983;margin-bottom:18px}.terminal .green{color:var(--green)}.terminal .blue{color:var(--blue)}section{padding:64px 0}section h2{font-size:2.2rem;letter-spacing:-.03em;margin:0 0 12px}section>p{color:var(--muted);max-width:700px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.card{background:linear-gradient(145deg,#131d31,#0e1626);border:1px solid var(--line);padding:24px;border-radius:16px}.icon{font-size:1.7rem}.card h3{margin:14px 0 7px}.card p{color:var(--muted);margin:0}.steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{counter-increment:step}.step:before{content:'0' counter(step);color:var(--blue);font-size:1.6rem;font-weight:800}.code{background:#070b13;border:1px solid var(--line);padding:18px 20px;border-radius:12px;font-family:Consolas,monospace;color:#cbd7ed;overflow:auto}.notice{border:1px solid #385b69;background:#0d222c;border-radius:14px;padding:20px;color:#c7eefa}.footer{border-top:1px solid #ffffff12;padding:28px 0 42px;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:58px}.grid,.steps{grid-template-columns:1fr}.navlinks{display:none}.hero h1{font-size:3.2rem}}
+</style>
 </head>
 <body>
+<header class="nav wrap"><div class="brand">🚀 <span>Game</span> Optimizer</div><nav class="navlinks"><a href="#ozellikler">Özellikler</a><a href="#nasil">Nasıl çalışır?</a><a href="#kurulum">Kurulum</a><a href="https://github.com/wlame-dx/game-optimizer">GitHub ↗</a></nav></header>
 <main>
-  <section class="hero">
-    <p class="accent">OPEN SOURCE · WINDOWS · POWERSHELL</p>
-    <h1>Game Optimizer</h1>
-    <p>A lightweight and reversible game launcher that applies limited, temporary Windows optimizations and restores the previous state after the game exits.</p>
-    <a class="button" href="https://github.com/wlame-dx/game-optimizer">View on GitHub</a>
-    <a class="button" href="../README.md">Read the README</a>
-    <div class="grid">
-      <div class="card"><h3>Reversible</h3><p>Registry and power-plan values are backed up before temporary changes.</p></div>
-      <div class="card"><h3>Focused</h3><p>Scans Steam and Epic Games titles and launches them from a simple CLI.</p></div>
-      <div class="card"><h3>Honest</h3><p>No guaranteed FPS claims. Results depend on hardware, drivers, and the game.</p></div>
-    </div>
-  </section>
-  <section><h2>How it works</h2><ol><li>Install with <code>install.ps1</code>.</li><li>Select a detected game.</li><li>Temporary settings are applied.</li><li>Close the game normally.</li><li>Previous settings are restored.</li></ol></section>
-  <section><h2>Safety</h2><p>The project does not overclock hardware, disable security software, or delete files. Use the source code and review changes before running scripts.</p></section>
-  <section><h2>VirusTotal</h2><p>No scan result is claimed until the exact release archive is uploaded and scanned. Add the public report URL to the README after scanning.</p></section>
-  <footer>MIT License · Game Optimizer</footer>
-</main>
-</body>
-</html>
+<section class="hero wrap"><div><div class="eyebrow">Windows · PowerShell · Açık kaynak</div><h1>Oyununu başlat.<br><em>Sistemi yorma.</em></h1><p class="lead">Game Optimizer, oyunlarını geçici ve geri alınabilir Windows ayarlarıyla başlatan hafif bir araçtır. Gereksiz vaatler yok; yalnızca kontrollü optimizasyon.</p><div class="buttons"><a class="btn primary" href="https://github.com/wlame-dx/game-optimizer">GitHub’da incele</a><a class="btn" href="#kurulum">Kuruluma git ↓</a></div></div><div class="terminal"><div class="bar">● ● ● &nbsp; game-optimizer</div><div class="blue">&gt; Oyunlar taranıyor...</div><p>[1] Stumble Guys (Steam)<br>[2] Euro Truck Simulator 2 (Steam)</p><div class="green">✓ Geçici ayarlar uygulandı</div><div class="green">✓ Oyun kapandı, ayarlar geri yüklendi</div></div></section>
+<section id="ozellikler" class="wrap"><h2>Basit, kontrollü, geri alınabilir.</h2><p>Aracın amacı mucize FPS üretmek değil; oyunu başlatırken ölçülü sistem ayarlarını yönetmek ve iş bitince eski duruma dönmektir.</p><div class="grid"><article class="card"><div class="icon">🎮</div><h3>Oyunları otomatik bulur</h3><p>Steam ve Epic Games kurulumlarını tarar, oyunlarını tek bir listede gösterir.</p></article><article class="card"><div class="icon">⚡</div><h3>Geçici optimizasyon</h3><p>Güç planı, Game DVR ve işlem önceliği gibi ayarları yalnızca oyun oturumu için uygular.</p></article><article class="card"><div class="icon">↩</div><h3>Eski hâline döner</h3><p>Registry ve güç planı değerleri yedeklenir. Oyun kapanınca otomatik olarak geri yüklenir.</p></article></div></section>
+<section id="nasil" class="wrap"><h2>Nasıl çalışır?</h2><div class="steps"><article class="card step"><h3>Oyunu seç</h3><p>Terminalde listelenen oyunlardan birini numarasıyla seç.</p></article><article class="card step"><h3>Oyna</h3><p>Game Optimizer geçici ayarları uygular ve oyunu başlatır.</p></article><article class="card step"><h3>Kapat ve geri dön</h3><p>Oyun kapanınca yedeklenen ayarlar ve güç planı geri yüklenir.</p></article></div></section>
+<section id="kurulum" class="wrap"><h2>Bir dakikada kur.</h2><p>Kaynak kodunu indir, PowerShell ile kurulum betiğini çalıştır ve terminalden başlat.</p><div class="code">cd "$env:USERPROFILE\Desktop\game-optimizer\game-optimizer"<br>Set-ExecutionPolicy -Scope Process Bypass<br>.\install.ps1<br><br>game-optimizer</div><div class="notice" style="margin-top:18px">⚠️ Yönetici yetkisi güç planı ve işlem önceliği değişiklikleri için önerilir. FPS artışı donanımına, sürücülerine ve oyuna göre değişir; garanti edilmez.</div></section>
+<section class="wrap"><h2>Güvenlik yaklaşımı</h2><p>Hardware overclock yapılmaz, güvenlik yazılımları kapatılmaz ve dosyalar silinmez. Registry değişiklikleri kullanıcı seviyesinde yedeklenir. VirusTotal sonucu yalnızca gerçek bir release arşivi tarandıktan sonra yayımlanır.</p></section>
+</main><footer class="footer wrap"><span>MIT License · Game Optimizer</span><a href="https://github.com/wlame-dx/game-optimizer">github.com/wlame-dx/game-optimizer ↗</a></footer>
+</body></html>
