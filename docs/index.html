@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Optimizer for Windows</title>
+  <meta name="description" content="A lightweight, reversible PowerShell game launcher and optimizer for Windows.">
+  <style>
+    :root { color-scheme: dark; --bg:#0b1020; --card:#121a2d; --text:#eef3ff; --muted:#aab7d4; --accent:#61dafb; }
+    * { box-sizing:border-box; } body { margin:0; font-family:Segoe UI,system-ui,sans-serif; background:linear-gradient(135deg,#0b1020,#172554); color:var(--text); }
+    main { max-width:980px; margin:auto; padding:72px 24px; } .hero { padding:42px; background:rgba(18,26,45,.86); border:1px solid #2d3b61; border-radius:24px; box-shadow:0 20px 60px #0006; }
+    h1 { font-size:clamp(2.2rem,6vw,4.5rem); margin:0 0 16px; } h2 { margin-top:42px; } p,li { color:var(--muted); line-height:1.7; } .accent { color:var(--accent); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:26px; } .card { background:var(--card); padding:22px; border-radius:16px; border:1px solid #293758; }
+    code { color:#d8f9ff; background:#09101f; padding:3px 6px; border-radius:5px; } a { color:var(--accent); } .button { display:inline-block; padding:12px 18px; margin:8px 8px 0 0; border-radius:10px; background:var(--accent); color:#07111c; text-decoration:none; font-weight:700; }
+    footer { margin-top:44px; color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p class="accent">OPEN SOURCE · WINDOWS · POWERSHELL</p>
+    <h1>Game Optimizer</h1>
+    <p>A lightweight and reversible game launcher that applies limited, temporary Windows optimizations and restores the previous state after the game exits.</p>
+    <a class="button" href="https://github.com/">View on GitHub</a>
+    <a class="button" href="../README.md">Read the README</a>
+    <div class="grid">
+      <div class="card"><h3>Reversible</h3><p>Registry and power-plan values are backed up before temporary changes.</p></div>
+      <div class="card"><h3>Focused</h3><p>Scans Steam and Epic Games titles and launches them from a simple CLI.</p></div>
+      <div class="card"><h3>Honest</h3><p>No guaranteed FPS claims. Results depend on hardware, drivers, and the game.</p></div>
+    </div>
+  </section>
+  <section><h2>How it works</h2><ol><li>Install with <code>install.ps1</code>.</li><li>Select a detected game.</li><li>Temporary settings are applied.</li><li>Close the game normally.</li><li>Previous settings are restored.</li></ol></section>
+  <section><h2>Safety</h2><p>The project does not overclock hardware, disable security software, or delete files. Use the source code and review changes before running scripts.</p></section>
+  <section><h2>VirusTotal</h2><p>No scan result is claimed until the exact release archive is uploaded and scanned. Add the public report URL to the README after scanning.</p></section>
+  <footer>MIT License · Game Optimizer</footer>
+</main>
+</body>
+</html>
