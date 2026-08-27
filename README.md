@@ -71,13 +71,7 @@ If the process cannot be changed because of Windows permissions, the game still 
 
 ## VirusTotal
 
-A VirusTotal result must be generated from the exact release files or archive. No scan result is claimed until those files are uploaded and the report URL is available.
-
-* **Status:** Scan pending — not a security verdict
-* **English report:** Add the public VirusTotal report URL here after uploading the release archive.
-* **Türkçe açıklama:** Yayın arşivini yükledikten sonra herkese açık VirusTotal rapor bağlantısını buraya ekleyin.
-
-Never upload files containing passwords, API keys, tokens, or private personal data to a public malware scanner.
+VirusTotal report is at website.
 
 ## Uninstall
 
@@ -135,11 +129,7 @@ game-optimizer
 
 ## VirusTotal
 
-VirusTotal sonucu yalnızca tam sürüm dosyaları veya arşivi gerçekten tarandıktan sonra yazılabilir.
-
-* **Durum:** Tarama bekliyor — bu bir güvenlik sonucu değildir.
-* **English report:** Yayın arşivini yükledikten sonra herkese açık VirusTotal rapor bağlantısını ekleyin.
-* **Türkçe açıklama:** Gerçek rapor bağlantısı olmadan “temiz” sonucu iddia edilmez.
+VirusTotal sonuçları websitemizde yer almaktadır.
 
 ## Lisans
 
